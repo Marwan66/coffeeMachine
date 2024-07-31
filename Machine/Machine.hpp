@@ -5,9 +5,10 @@
 
 class Machine 
 {
+
     public:
         struct MachineData{
-            bool m_PoweredOn = false;
+            bool m_PowerState = false; /* False for Power Off, true for Power on*/
             const int m_waterTank = WATER_TANK_SIZE;
             int m_coffeeTank;
             int m_coffeeWasteTank;
@@ -20,6 +21,7 @@ class Machine
         void refillWater(int amount);
         void refillCoffee(int amount);
         void emptyCoffeeWaste(void);
+        void PowerOnOff(void);
 
         MachineData machineData;
 
